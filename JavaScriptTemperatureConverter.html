@@ -10,12 +10,15 @@ function temp (form) {
 function changeImage (form) {
 	if (form.celsius.value >= 100) {
 		document.getElementById('weather').src  = 'hot.jpg';
+		document.getElementById('weather').alt  = 'hot weather';
 		}
 	else if (form.celsius.value < 0) {
 		document.getElementById('weather').src  = 'cold.jpg';
+		document.getElementById('weather').alt  = 'normal weather';
 		}
 	else {
 		document.getElementById('weather').src  = 'weather2.png';
+		document.getElementById('weather').alt  = 'cold weather';
 		}
 	}
 
@@ -23,7 +26,7 @@ function changeImage (form) {
 </head>
 <body>
 
-<img id = "weather" src = "weather.png" style = "width: 100px">
+<img id = "weather" alt = "weather picture" src = "weather.png" style = "width: 100px">
 
 <form>
 Celsius:    <input type="text" size="15" name="celsius" style = "margin-left: 21px; margin-bottom: 5px"><br/>
